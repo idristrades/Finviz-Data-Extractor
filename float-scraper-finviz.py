@@ -7,7 +7,7 @@ stock = input('Enter ticker symbol:')
 # Set start time to measure the speed of the whole operation
 start = time()
 
-# Get float from shortsqueeze.com
+# Get float from finviz.com
 try:
     stock_data = finvizfinance(stock)
     stock_fundament = stock_data.ticker_fundament()
