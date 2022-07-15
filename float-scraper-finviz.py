@@ -11,7 +11,8 @@ start = time()
 try:
     stock_data = finvizfinance(stock)
     stock_fundament = stock_data.ticker_fundament()
-    print('Shares Float: ' + stock_fundament['Shs Float'])
+    print('Ticker: ' + stock_data.ticker)
+    print('Float: ' + stock_fundament['Shs Float'])
     print('Price: ' + stock_fundament['Price'])
 
 # If not available, print error message
