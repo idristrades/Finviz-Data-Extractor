@@ -8,14 +8,14 @@ stock = input('Enter ticker symbol:')
 start = time()
 
 # Get float from shortsqueeze.com
-#try:
-stock_data = finvizfinance(stock)
-stock_fundament = stock_data.ticker_fundament()
-print('Shares Float: ' + stock_fundament['Shs Float'])
+try:
+    stock_data = finvizfinance(stock)
+    stock_fundament = stock_data.ticker_fundament()
+    print('Shares Float: ' + stock_fundament['Shs Float'])
 
 # If not available, print error message
-# except:
-#     print('No data available')
+except:
+     print('No data available')
     
 # Calculate the time taken for the entire scraping operation
 end = time()
